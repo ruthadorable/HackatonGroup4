@@ -1,0 +1,27 @@
+body{
+    width:100%;
+    max-width:500px;
+    margin:100px auto;
+    text-align: center;
+    font-family: Arial,Helvetica,sans-serif;
+}
+h2{
+    text-transform: uppercase;
+    letter-spacing: 2 px;
+}
+input,select{
+    width:250 px;
+    height: 30 px;
+    border: 1 px solid lightblue;
+    outline :none;
+}
+select {
+    width:100 px;
+    margin-left: 10px;
+    letter-spacing: 2px;
+}
+span{
+    color:crimson;
+    font-size:2 em;
+    font-weight: 900;
+}
