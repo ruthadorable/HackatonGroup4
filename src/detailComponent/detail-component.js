@@ -9,7 +9,7 @@ const DetailComponent = (props) => {
     return (
         <View>
             <Text>Titre: {title}</Text>
-            <Text>La compagnie de production: {comp}</Text>
+            <Text>Compagnie de production: {comp}</Text>
             <Text>Genre(s): {genre}</Text>
             <Text>Synopsis: {synop}</Text>
             <Text>Date de sortie: {date}</Text>
