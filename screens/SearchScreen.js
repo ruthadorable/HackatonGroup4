@@ -1,17 +1,18 @@
 import React from 'react';
 import {useState,useEffect} from 'react';
-import {View,Text,TouchableOpacity,Button,StyleSheet,Image,TextInput} from 'react-native';
+import {View,Text,TouchableOpacity,Button,StyleSheet,Image,TextInput,FlatList} from 'react-native';
 import Header from '../components/Header'
 import LOUPE from '../assets/icons8-chercher-50.png';
-
+import {getSearchedMovies} from '../components/api';
+import axios from 'axios';
 
 const SearchScreen = (props) => {
     const [film,setFilm]=useState("");
     useEffect(()=>{
         console.log({film});
     });
+    
     return (
-
 
         <View style={styles.container}>
             <TouchableOpacity style={styles.button} >
@@ -19,7 +20,7 @@ const SearchScreen = (props) => {
             <TextInput placeholder='Rechercher Film' value={film} style={styles.text} onChangeText={(value)=>setFilm(value)}/>
             </TouchableOpacity>
         </View>
-
+        {getSearchedMovies(film);}
     )
 }
 
