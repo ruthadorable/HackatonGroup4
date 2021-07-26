@@ -30,10 +30,8 @@ export default Header;
 const styles = StyleSheet.create({
     container:{flex:1,
         flexDirection:"row",
-        justifyContent:'flex-start',
         margin: 10,
         height: 40,
-        alignItems:'center',
     },
     title:{
         fontSize:26,
@@ -41,14 +39,13 @@ const styles = StyleSheet.create({
         height:50,
         width:250,
         alignItems:'center',
-
     },
     logo:{
         alignItems:'flex-start',
         height:50,
         width:50,
         marginLeft: 15,
-        marginRight:40,
+        marginRight:10,
     }
 
 });

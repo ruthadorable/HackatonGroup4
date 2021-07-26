@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React ,{Component}from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 /*import {createStackNavigator} from 'react-navigation-stack';*/
@@ -9,11 +9,16 @@ import DrawerMenu from './screens/DrawerMenu';
 import MoviesScreen from './screens/MoviesScreen';
 import SearchScreen from './screens/SearchScreen';
 import Header from './components/Header';
-
+import MovieDetails from './screens/MovieDetails';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import { render } from 'react-dom';
 const Drawer=createDrawerNavigator();
 /*const Stack = createStackNavigator();*/
+const Tab=createMaterialBottomTabNavigator();
+export default class App extends Component {
+  render(){
 
-const App=()=> {
+
   return (
     <NavigationContainer>
       <View style={styles.align}><Header/></View>
@@ -21,12 +26,14 @@ const App=()=> {
       <Drawer.Screen name="Home" component={MainScreen}/>
       <Drawer.Screen name="SearchFilm" component={SearchScreen} />
       <Drawer.Screen name="Films" component={MoviesScreen}/>
-      </Drawer.Navigator>
-      
+      <Drawer.Screen name="Movie" component={MovieDetails}/>
+      </Drawer.Navigator> 
     </NavigationContainer>
-  );
+ 
+  
+  );}
 }
-export default App;
+
 
 const styles = StyleSheet.create({
   align:{

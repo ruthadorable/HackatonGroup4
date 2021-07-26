@@ -2,6 +2,7 @@ import React from 'react'
 import {View,Text,StyleSheet} from 'react-native';
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import FILM from "../assets/icons8-film-50.png";
+import HEART from "../assets/favorite.png"
 import {
     Avatar,
     Title,
@@ -23,15 +24,20 @@ const DrawerMenu = (props) => {
                         <View style={{flexDirection:'row',marginTop: 15}}>
                             <Avatar.Image
                             source={FILM}
-                            size={50}/>
+                            size={60}/>
                             <View style={{marginLeft:15,flexDirection:'column'}}>
                                 <Title style={styles.title}>Hackaton Movie App</Title>
-                                <Caption style={styles.caption}>Fait par Ruth Ann, </Caption>
-                                <Caption style={styles.caption}>         Isaac, </Caption>
-                                <Caption style={styles.caption}>         Stefan </Caption>
+                                <Caption style={styles.caption}>Fait par @RuthAnn, </Caption>
                             </View>
-                            
                         </View>
+                    </View>
+                    <View style={styles.userInfoSection}>
+                    <View style={{flexDirection:'row',marginTop: 15}}>
+                    <Avatar.Image
+                            source={HEART}
+                            size={50}/>
+                    <Title style={styles.title}>Favoris</Title>
+                    </View>
                     </View>
                 </View>
             </DrawerContentScrollView>

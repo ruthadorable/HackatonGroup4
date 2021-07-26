@@ -1,7 +1,5 @@
-import React from 'react'
-import { StyleSheet,View,ActivityIndicator,StyleSheet } from 'react-native'
-import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import React,{Component} from 'react'
+import { StyleSheet,View,ActivityIndicator} from 'react-native'
 
 export class MovieDetails extends Component {
     constructor(props) {
@@ -23,7 +21,7 @@ export class MovieDetails extends Component {
     render() {
         return (
             <View styles={styles.main_container}>
-                {(this.state.isLoading)?(this._displayLoading)):}
+                {(this.state.isLoading)?(this._displayLoading):(null)}
             </View>
         )
     }

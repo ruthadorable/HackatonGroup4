@@ -10,7 +10,7 @@ const SEARCH_URL=BASE_URL+'/search/movie?'+API_KEY+'&language=en-USpage=1&includ
 export function getFilmsByTitle(film){
     return fetch('https://api.themoviedb.org/3/search/movie?'+API_KEY+'&language=fr&query='+film)
     .then((response)=>response.json())
-    .then((responseJson)=>responseJson.results)
+    .then((responseJson)=>responseJson.Object)
     .catch((error)=>console.log(error));
 }
  

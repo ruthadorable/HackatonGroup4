@@ -5,7 +5,7 @@ import {
   Image,
   StyleSheet,
   Dimensions,
-  Platform,
+  Platform,Modal
 } from 'react-native';
 import {useTheme} from 'react-native-paper';
 
@@ -25,11 +25,11 @@ const MovieItem = (props) => {
     setModalMovieData({});
     setModalVisible(false);
   };
-  const {singleData, category} = props;
+  const {movie} = props;
   const {colors} = useTheme();
 
   const handlePress = () => {
-    setModalMovieData(singleData);
+    setModalMovieData(movie);
     setModalVisible(true);
   };
   return (
@@ -48,16 +48,16 @@ const MovieItem = (props) => {
             source={{uri: singleData.poster}}
           />
           <View style={{position: 'absolute', right: 5, bottom: 10}}>
-            <ReleaseDate label={singleData.releaseDate?.slice(0, 4)} />
+            <ReleaseDate label={movie.releaseDate?.slice(0, 4)} />
           </View>
           <View>
-              <Text>{singleData.title}</Text>
+              <Text>{movie.title}</Text>
           </View>
           <View>
-            <Rating rating={singleData.rating} />
+            <Rating rating={movie.rating} />
           </View>
           <View style={{position: 'absolute', left: 5, top: 5}}>
-            <Genres genres={singleData.genres} />
+            <Genres genres={movie.genres} />
           </View>
         </View>
       </TouchableHighlight>
