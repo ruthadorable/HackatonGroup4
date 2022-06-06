@@ -1,0 +1,53 @@
+.searchWrapper {
+  margin-top: 20px;
+  position: absolute;
+  margin-left: 270px;
+  width: fit-content;
+  background-color: #d2e2fb;
+}
+.searchWrapper .filter input {
+  font-size: 1rem;
+  padding-left: 10px;
+  margin: 15px;
+  position: relative;
+  width: 900px;
+  height: 2em;
+  border-radius: 0.3em;
+  border-width: 0.1rem;
+  border-color: #66a6ff;
+  background-color: #bbd5fa;
+  text-decoration-color: grey;
+}
+
+.searchWrapper .button button {
+  height: 2rem;
+  background-color: #141adb;
+  color: #fff;
+  border-style: none;
+}
+.table {
+  display: table; /* Allow the centering to work */
+  margin: 0 auto;
+}
+
+ul#horizontal-list {
+  min-width: 696px;
+  list-style: none;
+  padding-top: 20px;
+  margin: 15px;
+}
+ul#horizontal-list li {
+  position: inherit;
+  display: inline;
+  margin: 1em;
+}
+button {
+  background-color: #141adb;
+  border-style: none;
+  height: 2.5rem;
+  width: 120px;
+  border-radius: 0.4em;
+  color: #fff;
+  position: absolute;
+  position: right;
+}
